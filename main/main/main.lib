@@ -1,0 +1,36 @@
+timestamp=1683488187286
+
+[~A]
+ModifyID=1
+Version=74
+
+[~MFT]
+0=14|0main.mgf|5734|0
+1=2|1main.mgf|1956|0
+3=2|3main.mgf|993|0
+
+[railroad_switch]
+A/railroad_switch_ar=21|../src/railroad_switch.vhd|51|1*0
+BinW64/railroad_switch_ar=3*0
+I=0*814
+I/railroad_switch_ar=0*3476
+M=11|2|vef|1683488187242|../src/railroad_switch.vhd|0*240*0xb89d349bb476ee5c2e0327ee8a015d2581a3b925|0*719*0x23b75c12e3e89f2ef000564498faa8c2
+M/railroad_switch_ar=21|2|vef|1683488187244|../src/railroad_switch.vhd|0*1063*0x53daad66ce1a3d8b34d7548d33d88738960eb848|0*3359*0x20116f55b147878295aeff36dce7fc50
+R=../src/railroad_switch.vhd|9
+Version=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|9aa4f229e421f17a4bd1a27fad47bdec91435bc29f650955ebe359233a683b5871e736e8e60f2574dff4d7998642112c
+Version/railroad_switch_ar=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|9aa4f229e421f17a4bd1a27fad47bdec80af15e062e5eb7c89f71990fee98958af2434234a36e95af60133e5f1e7ec75
+
+[railroad_switch_tb]
+A/railroad_switch_ar_tb=21|../src/railroad_switch_tb.vhd|8|1*1956
+BinW64/railroad_switch_ar_tb=3*993
+I=0*4218
+I/railroad_switch_ar_tb=0*5734
+M=11|2|vef|1683488187268|../src/railroad_switch_tb.vhd|0*3886*0x23caf850d9bfb2e8c972eeaf46bc13e15cf4fe55|0*4117*0x23b75c12e3e89f2ef000564498faa8c2
+M/railroad_switch_ar_tb=21|2|vef|1683488187270|../src/railroad_switch_tb.vhd|0*4470*0x3ea369fbeefc04fa4c9ba1e1a9c96171553d80be|0*5608*0x20116f55b147878295aeff36dce7fc50
+R=../src/railroad_switch_tb.vhd|5
+Version=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|9aa4f229e421f17a4bd1a27fad47bdecc274df8e1bd5100663f668b2d476af17fcb2e376f6081cdd82b63d449dfc22f5
+Version/railroad_switch_ar_tb=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|9aa4f229e421f17a4bd1a27fad47bdecba639edd8f86e5695ab5cb6355e8b34feea3f0ff803fdbf34b44becb881ec0a6
+
+[~U]
+railroad_switch=11|0*0|
+railroad_switch_tb=11|0*3744|

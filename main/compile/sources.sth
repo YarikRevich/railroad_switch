@@ -1,0 +1,9 @@
+[Files List]
+E:\Active HDL\vlib\std/src/standard.vhd=S
+E:\Active HDL\vlib\std/src/textio.vhd=S
+E:\Active HDL\vlib\ieee/src/std_logic_1164.vhdl=S
+E:\Active HDL\vlib\ieee/src/std_logic_1164-body.vhdl=S
+E:\Active HDL\vlib\ieee/src/numeric_std.vhdl=S
+E:\Active HDL\vlib\ieee/src/numeric_std-body.vhdl=S
+E:\Active HDL\fsm\main/src/railroad_switch.vhd=S
+E:\Active HDL\fsm\main/src/railroad_switch_tb.vhd=S

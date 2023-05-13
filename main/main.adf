@@ -1,0 +1,28 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=main
+[Library]
+main=.\main\main.lib
+[$LibMap$]
+main=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+[Files]
+/railroad_switch.vhd=-1
+/railroad_switch_tb.vhd=-1
+[Files.Data]
+.\src\railroad_switch.vhd=VHDL Source Code
+.\src\railroad_switch_tb.vhd=VHDL Source Code
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

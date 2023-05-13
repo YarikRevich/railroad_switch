@@ -1,0 +1,1 @@
+-w -erf "E:/Active HDL/fsm/main/compile/main.erf" -d "E:/Active HDL/fsm/main/compile" -s "E:/Active HDL/fsm/library.cfg" -j "E:/Active HDL/fsm/main/projlib.cfg" -work main -reorder -O3 -e 100 -work main -2002 "E:/Active HDL/fsm/main/src/railroad_switch.vhd" "E:/Active HDL/fsm/main/src/railroad_switch_tb.vhd" 

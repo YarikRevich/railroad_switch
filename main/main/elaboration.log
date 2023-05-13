@@ -1,0 +1,35 @@
+Active-HDL 13.0.376.8320 2023-05-07 21:36:40
+
+Elaboration top modules:
+Architecture                  railroad_switch_ar_tb(railroad_switch_tb)
+
+
+--------------------------------------------------------------------------------------------------------------
+Entity             | Architecture          | Library | Info | Compiler Version          | Compilation Options
+--------------------------------------------------------------------------------------------------------------
+railroad_switch_tb | railroad_switch_ar_tb | main    |      | 13.0.376.8320 (Windows64) | -O3
+railroad_switch    | railroad_switch_ar    | main    |      | 13.0.376.8320 (Windows64) | -O3
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+VHDL Package                               | Library | Info | Compiler Version          | Compilation Options
+--------------------------------------------------------------------------------------------------------------
+standard                                   | std     |      |                           | <unavailable>
+TEXTIO                                     | std     |      | 13.0.376.8320 (Windows64) |  -2019
+std_logic_1164                             | ieee    |      | 13.0.376.8320 (Windows64) |  -2008
+NUMERIC_STD                                | ieee    |      | 13.0.376.8320 (Windows64) |  -2008
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+Library                                    | Comment
+--------------------------------------------------------------------------------------------------------------
+ieee                                       | Standard IEEE packages library
+main                                       | None
+std                                        | Standard VHDL library
+--------------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+railroad_switch_tb railroad_switch_tb railroad_switch_ar_tb
+
+
+The performance of simulation is reduced. Version Student Edition

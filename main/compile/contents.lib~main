@@ -1,0 +1,5 @@
+1
+~E 1 "../src/railroad_switch.vhd" 9 railroad_switch
+~A 1 "../src/railroad_switch.vhd" 51 railroad_switch_ar
+~E 1 "../src/railroad_switch_tb.vhd" 5 railroad_switch_tb
+~A 1 "../src/railroad_switch_tb.vhd" 8 railroad_switch_ar_tb
