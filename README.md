@@ -14,6 +14,9 @@ Example of FSM(Finite-State Machine), which is used to synchronize actions betwe
 - Set **railroad_switch_tb** as the main testbench
 - Initialize simulation
 
+## Documentation
+![image](./docs/diagram.png)
+
 ## Status
 This project is stil maintaned
 
