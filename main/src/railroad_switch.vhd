@@ -8,17 +8,13 @@ use ieee.numeric_std.all;
 -- with its help.
 entity railroad_switch is
 port(	  
-	-- represents status tracker entity, which indicates train entered
-	-- railroad switch working area.
-	status_in      : in std_logic;
-	
-	-- represents status tracker entity, which indicates train exited
-	-- railroad switch working area.
-	status_out     : in std_logic;
-	
 	-- represents movement trigger entity, which indicates train demand
 	-- to move the enter switch.
 	move_trig_in   : in std_logic;
+
+	-- represents status tracker entity, which indicates train entered
+	-- railroad switch working area.
+	status_in      : in std_logic;
 
 	-- represents movement trigger entity, which indicates train demand
 	-- to move the exit switch.
@@ -30,16 +26,16 @@ port(
 	-- represents reset signal input.
 	reset          : in std_logic;
 	
+	-- represents railroad enter switch movement state, which
+	-- value can be used by the external business logic to
+	-- activate input railroad switch.
+	move_state_in  : out std_logic;
+
 	-- represents railroad switch status state, which
 	-- value can be used by the external business logic
 	-- to track if the railroad switch railroad area
 	-- is meant to be accessable.
 	status_state   : out std_logic;
-	
-	-- represents railroad enter switch movement state, which
-	-- value can be used by the external business logic to
-	-- activate input railroad switch.
-	move_state_in  : out std_logic;
 	
 	-- represents railroad exit switch movement state, which
 	-- value can be used by the external business logic to
@@ -81,22 +77,24 @@ begin
 			if reset = '1' then
 				FSM_status_state <= ACCESSABLE;
 			else
-				if status_in = '1' and FSM_status_state = ACCESSABLE then
+				if move_trig_in = '1' and FSM_status_state = ACCESSABLE and FSM_move_output_state = MOVE_INITIAL_OUTPUT_SWITCH then   
+					FSM_move_input_state <= MOVE_TRIGERRED_INPUT_SWITCH;
+				elsif move_trig_in = '0' and FSM_status_state = ACCESSABLE and FSM_move_input_state = MOVE_TRIGERRED_INPUT_SWITCH then   
+					FSM_move_input_state <= MOVE_INITIAL_INPUT_SWITCH;	
+			 	end if;
+
+				if status_in = '1' and FSM_status_state = ACCESSABLE and FSM_move_output_state = MOVE_INITIAL_OUTPUT_SWITCH and FSM_move_input_state = MOVE_INITIAL_INPUT_SWITCH then
 					FSM_status_state <= BUSY;
-				elsif status_out = '1' and FSM_status_state = BUSY then
+				elsif status_in = '0' and FSM_status_state = BUSY then
 					FSM_status_state <= ACCESSABLE; 
 				end if;
 				
-				if move_trig_in = '1' and FSM_status_state = ACCESSABLE then   
-					FSM_move_input_state <= MOVE_TRIGERRED_INPUT_SWITCH;
-				elsif move_trig_in = '0' and FSM_status_state = ACCESSABLE then   
-					FSM_move_input_state <= MOVE_INITIAL_INPUT_SWITCH;	
-			 	end if;
-				
-				if move_trig_out = '1' and FSM_status_state = ACCESSABLE then
+				if move_trig_out = '1' and FSM_status_state = ACCESSABLE and FSM_move_input_state = MOVE_INITIAL_INPUT_SWITCH then
 					FSM_move_output_state <= MOVE_TRIGERRED_OUTPUT_SWITCH; 
-				elsif move_trig_out = '0' and FSM_status_state = ACCESSABLE then
+				elsif move_trig_out = '0' and FSM_status_state = ACCESSABLE and FSM_move_output_state = MOVE_TRIGERRED_OUTPUT_SWITCH then
 					FSM_move_output_state <= MOVE_INITIAL_OUTPUT_SWITCH; 
+
+					-- TODO: increase counter
 				end if;
 			end if;
 		end if;		  
